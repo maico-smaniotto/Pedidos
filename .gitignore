@@ -1,0 +1,29 @@
+# .NET (PedidosApi)
+**/bin/
+**/obj/
+*.user
+*.suo
+*.vs/
+*.db
+
+# React (PedidosWeb)
+node_modules/
+build/
+dist/
+.env
+*.log
+
+# Flutter (PedidosMobile)
+build/
+.dart_tool/
+.packages
+.flutter-plugins
+.flutter-plugins-dependencies
+.pub-cache/
+pubspec.lock
+*.iml
+
+# Ignorar arquivos do sistema
+.DS_Store
+Thumbs.db
+
