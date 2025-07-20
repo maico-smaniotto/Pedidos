@@ -14,6 +14,7 @@ builder.Services.AddScoped<IClienteEnderecoRepository, ClienteEnderecoRepository
 
 builder.Services.AddScoped<IMunicipioService, MunicipioService>();
 builder.Services.AddScoped<IClienteService, ClienteService>();
+builder.Services.AddScoped<IClienteEnderecoService, ClienteEnderecoService>();
 
 builder.Services.AddControllers()
     .AddDataAnnotationsLocalization();

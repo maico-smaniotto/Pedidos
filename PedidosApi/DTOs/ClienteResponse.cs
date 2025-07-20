@@ -7,11 +7,11 @@ public record ClienteResponse
 (
     long Id,
     char TipoPessoa,
-    String TipoPessoaDescricao,
-    String DocPessoa,
-    String RazaoSocial,
-    String NomeFantasia,
-    String Email,
+    string TipoPessoaDescricao,
+    string DocPessoa,
+    string RazaoSocial,
+    string NomeFantasia,
+    string Email,
     bool Ativo
 )
 {

@@ -56,17 +56,6 @@ public class ClienteEnderecoRepository : IClienteEnderecoRepository
         return clienteEndereco;
     }
 
-    public async Task RemoverAsync(long id)
-    {
-        var clienteEndereco = await ObterPorIdAsync(id);
-        if (clienteEndereco != null)
-        {
-            clienteEndereco.StatusRegistro = StatusRegistro.Excluido;
-            _context.ClientesEnderecos.Update(clienteEndereco);
-            await _context.SaveChangesAsync();
-        }
-    }
-
     public async Task<bool> ExisteAsync(long id)
     {
         return await _context.ClientesEnderecos.AnyAsync(ce => ce.Id == id);

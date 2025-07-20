@@ -69,13 +69,6 @@ public class ClienteRepository : IClienteRepository
         return cliente;
     }
 
-    public async Task RemoverAsync(Cliente cliente)
-    {
-        cliente.StatusRegistro = StatusRegistro.Excluido;
-        _context.Update(cliente);
-        await _context.SaveChangesAsync();
-    }
-
     public async Task<bool> ExisteAsync(long id)
     {
         return await _context.Clientes.AnyAsync(c => c.Id == id && c.StatusRegistro != StatusRegistro.Excluido);

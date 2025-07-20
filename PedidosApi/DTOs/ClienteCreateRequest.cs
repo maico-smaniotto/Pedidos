@@ -16,11 +16,11 @@ public record ClienteCreateRequest
     public string? NomeFantasia { get; init; }
 
     [EmailAddress(ErrorMessage = "E-mail inválido.")]
-    public string? Email { get; init; } = default!;
+    public string? Email { get; init; }
 
     public bool Ativo { get; init; }
 
-    [Required(ErrorMessage = "Pelo menos um endereço deve ser informado.")]
-    [MinLength(1, ErrorMessage = "Pelo menos um endereço deve ser informado.")]
+    [Required(ErrorMessage = "Ao menos um endereço deve ser informado.")]
+    [MinLength(1, ErrorMessage = "Ao menos um endereço deve ser informado.")]
     public IEnumerable<ClienteEnderecoRequest> Enderecos { get; init; } = default!;
 }

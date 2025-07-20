@@ -6,7 +6,7 @@ namespace PedidosAPI.DTOs;
 public record MunicipioResponse(
     string CodigoIbge,
     string Nome,
-    String Uf
+    string Uf
 )
 {
     public static MunicipioResponse FromEntity(Municipio entity)

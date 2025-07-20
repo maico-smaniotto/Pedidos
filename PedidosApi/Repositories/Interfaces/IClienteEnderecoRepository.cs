@@ -8,7 +8,6 @@ public interface IClienteEnderecoRepository
     Task<ClienteEndereco?> ObterPorIdAsync(long id);
     Task<ClienteEndereco> AdicionarAsync(ClienteEndereco clienteEndereco);
     Task<ClienteEndereco> AtualizarAsync(ClienteEndereco clienteEndereco);
-    Task RemoverAsync(long id);
     Task<bool> ExisteAsync(long id);
     Task<int> ContarTodosAsync(long clienteId, bool ativo = true);
 }

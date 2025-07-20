@@ -101,7 +101,10 @@ public class ClienteService : IClienteService
 
     public async Task RemoverAsync(long clienteId)
     {
-        var cliente = await _clienteRepository.ObterPorIdAsync(clienteId) ?? throw new NotFoundException("Cliente", clienteId);
-        await _clienteRepository.RemoverAsync(cliente);
+        var cliente = await _clienteRepository.ObterPorIdAsync(clienteId)
+            ?? throw new NotFoundException("Cliente", clienteId);
+            
+        cliente.StatusRegistro = StatusRegistro.Excluido;
+        await _clienteRepository.AtualizarAsync(cliente);
     }
 }
